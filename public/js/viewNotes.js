@@ -24,7 +24,6 @@ const getNotes = (userId) => {
 
 const renderDataAsHtml = (data) => {
   let cards = ``;
-  console.log(Object.entries(data))
   const entries = Object.entries(data);
   const sortedEntries = entries.sort((a,b) => {
       const aTitle = a[1].title;
@@ -37,7 +36,6 @@ const renderDataAsHtml = (data) => {
       }
       return 0;
   })
-  console.log(sortedEntries)
   for (const noteItem of sortedEntries) {
     const note = noteItem[1];
     // For each note create an HTML card
