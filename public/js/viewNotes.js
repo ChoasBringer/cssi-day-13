@@ -39,10 +39,9 @@ const renderDataAsHtml = (data) => {
   })
   console.log(sortedEntries)
   for (const noteItem of sortedEntries) {
-    const note = noteItem;
-    console.log(note)
+    const note = noteItem[1];
     // For each note create an HTML card
-    cards += createCard(note, noteItem)
+    cards += createCard(note, noteItem[0])
   };
   // Inject our string of HTML into our viewNotes.html page
   document.querySelector('#app').innerHTML = cards;
